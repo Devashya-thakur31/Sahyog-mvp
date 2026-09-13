@@ -21,16 +21,28 @@ export default function Navbar() {
           <span className="text-xl font-bold text-neutral-900">SAHYOG</span>
         </Link>
 
+        {/* REPLACED BLOCK */}
         <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600"
-            >
-              {link.label}
-            </a>
-          ))}
+          <Link
+            to="/organizations"
+            className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600"
+          >
+            Organizations
+          </Link>
+
+          <Link
+            to="/needs"
+            className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600"
+          >
+            Needs
+          </Link>
+
+          <Link
+            to="/volunteer"
+            className="text-sm font-medium text-neutral-600 transition-colors hover:text-primary-600"
+          >
+            Volunteer
+          </Link>
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
